@@ -64,17 +64,62 @@
 
     /* Accessibility focus */
     a:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:14px}
+	.headbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+			}
+	.email-link {
+	  display: inline-flex;
+	  align-items: center;
+	  gap: .5rem;
+	  padding: .55rem .8rem;
+	  border-radius: 12px;
+	  border: 1px solid rgba(229,231,235,.14);
+	  background: rgba(255,255,255,.03);
+	  color: var(--fg);
+	  font-weight: 600;
+	  text-decoration: none;
+	  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+	}
+	.email-link:hover {
+	  background: linear-gradient(135deg, var(--accent), var(--accent2));
+	  color: #0b0c16;
+	  box-shadow: 0 10px 24px rgba(167,139,250,.22), 0 6px 18px rgba(34,211,238,.18);
+	}
+	.email-link:focus-visible {
+	  outline: 3px solid var(--ring);
+	  outline-offset: 3px;
+	}
+	.email-link svg { width: 18px; height: 18px; opacity: .9; }		
+	@media (max-width: 520px) {
+	  .email-link .addr { display: none; }
+	.logoimg { width: 34px; height: 34px; border-radius: 10px; display:block; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="container" style="padding:1rem 2rem">
-        <a class="brand" href="#" aria-label="Home">
-          <span class="logo" aria-hidden="true"></span>
-          <span class="title">David Lynch</span>
-        </a>
-      </div>
+		<div class="container" style="padding:1rem 2rem">
+		  <div class="headbar">
+			<a class="brand" href="#" aria-label="Home">
+			  <img class="logoimg" src="images/dl_mark_square_capitalL_64.png" alt="David Lynch logo">
+			  <span class="title">David Lynch - Home</span>
+			</a>
+
+			<!-- Clickable email link -->
+			<a class="email-link"
+			   href="mailto:david@davidlynch.co.nz?subject=Hello%20from%20davidlynch.co.nz">
+			  <!-- tiny inline envelope icon (no external assets) -->
+			  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path d="M3.5 6.5h17v11h-17z" stroke="currentColor" stroke-width="1.6" rx="3"/>
+				<path d="M4 7l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+			  </svg>
+			  <span class="addr">david@davidlynch.co.nz</span>
+			</a>
+		  </div>
+		</div>
     </header>
 
     <main class="container hero">
