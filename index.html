@@ -50,7 +50,12 @@
     .card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.35);border-color:rgba(167,139,250,.35)}
     figure{display:grid;grid-template-rows:auto 1fr;padding:0;margin:0}
     .thumb{display:block;aspect-ratio:16/9;width:100%;object-fit:cover;background:linear-gradient(135deg, rgba(167,139,250,.15), rgba(34,211,238,.15));}
-    .cap{padding:1rem}
+	.thumb.fit {
+	 object-fit: contain;          /* show the whole image, no crop */
+	 object-position: center;
+	 background: transparent;      /* or var(--card) if you want letterbox bars visible */
+	}
+	.cap{padding:1rem}
     .cap h2{font-size:1.05rem;margin:0 0 .35rem}
     .cap p{margin:0;color:var(--muted);font-size:.95rem}
 
@@ -82,7 +87,7 @@
         <a class="card" href="https://davidlynchit.com" target="_blank" rel="noopener" aria-label="davidlynchit.com">
           <figure>
             <!-- Replace the src below with your image path, e.g. assets/davidlynchit.jpg -->
-            <img class="thumb" alt="davidlynchit.com placeholder" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23a78bfa'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%230b0c16'/%3E%3Crect rx='26' x='40' y='40' width='1520' height='820' fill='url(%23g)' opacity='.24'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' fill='%23e5e7eb' font-family='Segoe UI,Roboto,Helvetica,Arial' font-size='44' font-weight='700'%3Edavidlynchit.com%3C/text%3E%3C/svg%3E"/>
+            <img class="thumb fit" src="images/davidlynchit_lines_clean.png" alt="David Lynch IT logo" loading="lazy" decoding="async">
             <figcaption class="cap">
               <h2>davidlynchit.com</h2>
               <p>Independent data & analytics consultancy — roadmaps, governance, and value realisation.</p>
@@ -93,7 +98,7 @@
         <!-- Card: loburnlodge.co.nz -->
         <a class="card" href="https://loburnlodge.co.nz" target="_blank" rel="noopener" aria-label="loburnlodge.co.nz">
           <figure>
-            <img class="thumb" alt="loburnlodge.co.nz placeholder" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%230b0c16'/%3E%3Crect rx='26' x='40' y='40' width='1520' height='820' fill='url(%23g2)' opacity='.24'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' fill='%23e5e7eb' font-family='Segoe UI,Roboto,Helvetica,Arial' font-size='44' font-weight='700'%3Eloburnlodge.co.nz%3C/text%3E%3C/svg%3E"/>
+            <img class="thumb fit" src="images/loburnlodgelake.jpg" alt="Loburn Lodge logo" loading="lazy" decoding="async">
             <figcaption class="cap">
               <h2>loburnlodge.co.nz</h2>
               <p>Boutique farmstay in North Canterbury — a quiet base to explore the region.</p>
@@ -104,7 +109,7 @@
         <!-- Card: boobeeboys.co.nz -->
         <a class="card" href="https://boobeeboys.co.nz" target="_blank" rel="noopener" aria-label="boobeeboys.co.nz">
           <figure>
-            <img class="thumb" alt="boobeeboys.co.nz placeholder" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23a78bfa'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%230b0c16'/%3E%3Crect rx='26' x='40' y='40' width='1520' height='820' fill='url(%23g3)' opacity='.24'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' fill='%23e5e7eb' font-family='Segoe UI,Roboto,Helvetica,Arial' font-size='44' font-weight='700'%3Eboobeeboys.co.nz%3C/text%3E%3C/svg%3E"/>
+            <img class="thumb fit" src="images/boobeeboys_transparent_preview.png" alt="Boo-Bee Boys logo" loading="lazy" decoding="async">
             <figcaption class="cap">
               <h2>boobeeboys.co.nz</h2>
               <p>Beekeeping information, products and services.</p>
@@ -118,7 +123,7 @@
             <img class="thumb" alt="thebookofdavid.org placeholder" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%230b0c16'/%3E%3Crect rx='26' x='40' y='40' width='1520' height='820' fill='url(%23g4)' opacity='.24'/%3E%3Ctext x='50%25' y='52%25' text-anchor='middle' dominant-baseline='middle' fill='%23e5e7eb' font-family='Segoe UI,Roboto,Helvetica,Arial' font-size='44' font-weight='700'%3Ethebookofdavid.org%3C/text%3E%3C/svg%3E"/>
             <figcaption class="cap">
               <h2>thebookofdavid.org</h2>
-              <p>Life lessons - words of wisdon and perspectives for the modern world.</p>
+              <p>Life lessons - words of wisdon and perspectives for the modern world.  Coming soon!</p>
             </figcaption>
           </figure>
         </a>
